@@ -1,0 +1,28 @@
+body{
+	background-image: url(m.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+.form1{
+	background-color: rgba(188,62,25,0.8);
+	border-bottom: 3px solid orange;
+}
+.form2{
+	background-color: rgba(197,75,76,0.7);
+	border-bottom: 3px solid white;
+}
+.form3{
+	background-color: rgba(53,75,6,0.6);
+	border-bottom: 3px solid green;
+}
+input{
+	border: 0;
+	background: transparent;
+	outline-style: none;
+	border-bottom: 1px solid white;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+	-webkit-appearance:none;
+}

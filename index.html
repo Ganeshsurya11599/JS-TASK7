@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>While Loop</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<br>
+	<button class="btn btn-info" onclick="myDay()">DAY</button>
+	<button class="btn btn-info" onclick="document.getElementById('date').innerHTML = Date()">DATE</button>
+	<p id="day" class="text-white"></p>
+	<p id="date" class="text-white"></p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<form class="form1">
+				<h4 class="text-white">MULTIPLICATION TABLE</h4>
+				<br>
+				<input type="number" placeholder="WHICH TABLE" id="tab1">	
+				<br>
+				<br>
+				<br>
+				<button type="button" class="btn btn-primary" onclick="myFunction()">Submit</button>
+				<br>
+				<p class="text-white" id="text"></p>
+				<br>
+			</form>
+			</div>
+			<br>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<form class="form2">
+					<h4 class="text-white">FACTORIAL NUMBER</h4>
+					<br>
+					<input type="number" placeholder="Enter a Number" id="fact1">
+					<br>
+					<br>
+					<br>
+				<button type="button" class="btn btn-primary" onclick="myFunction1()">Submit</button>
+				<br>
+				<p class="text-white" id="text1"></p>
+				<br>
+				</form>
+			</div>
+			<br>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<form class="form3">
+					<h4 class="text-white">PRINT THE NUMBERS</h4>
+					<br>
+					<input type="number" placeholder="Staring Number" id="fnum">
+					<br>
+					<br>
+					<input type="number" placeholder="Ending Number" id="lnum">
+					<br>
+					<br>
+				<button type="button" class="btn btn-primary" onclick="getNumber()">Submit</button>
+				<br>
+				<p class="text-white" id="exp"></p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+
+function myFunction(){
+	var num1=document.getElementById('tab1').value;
+	var num2=1;
+	var text =""
+	 num1=parseInt(num1);
+
+	while(num2<=10){
+		document.getElementById('text').innerHTML +="<b>" + num1 + "*" + num2 + "=" + (num1*num2) + "<br>" + "</b>"
+		num2++;
+		}
+}
+
+function myFunction1(){
+	var number1=document.getElementById('fact1').value;
+	var fact=1;
+	var text = ""
+	for(i=number1;i>=1;i=i-1){
+		fact=fact*i;
+		document.getElementById('text1').innerHTML=fact
+	}
+}
+
+function getNumber(){
+		var firstnumber = document.getElementById('fnum').value;
+		var lastnumber = document.getElementById('lnum').value;
+		var text=""
+		firstnumber=parseInt(firstnumber);
+
+		var i = firstnumber+ 1;
+		
+		do {
+			text += i+ "<br>";
+			i++;
+		}while(i<=lastnumber)
+		document.getElementById("exp").innerHTML = text
+	}
+
+	function myDay() {
+		var day ;
+		switch (new Date().getDay()){
+			case 0: 
+			day = "Sunday";
+			break;
+			case 1: 
+			day = "Monday";
+			break;
+			case 2: 
+			day = "tuesday";
+			break;
+			case 3: 
+			day = "Wednesday";
+			break;
+			case 4: 
+			day = "Thursday";
+			break;
+			case 5: 
+			day = "Friday";
+			break;
+			case 6: 
+			day = "Saturday";
+	
+		}
+		document.getElementById('day').innerHTML = "<h5>Today is " + day +"</h5>";
+	}
+
+</script>
+</html>
